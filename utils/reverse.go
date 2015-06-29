@@ -1,10 +1,9 @@
 package utils
 
-import "fmt"
-
 func Reverse(s string) string {
-	for _, r := range s {
-		fmt.Println(r);
+	reversed := make([]rune, len(s))
+	for i, r := range s {
+		reversed[len(s) - i - 1] = r
 	}
-	return ""
+	return string(reversed)
 }
